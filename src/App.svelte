@@ -11,12 +11,12 @@
 
   // Time constants (in millions of years)
   const MIN_TIME = 0;
-  const MAX_TIME = 13800; // 13.8 billion years (could make this 4.54 billion years for Earth)
+  const MAX_TIME = 4540; // 13.8 billion years (could make this 4.54 billion years for Earth)
   const MIN_SCALE = 1;
   const MAX_SCALE = 1000;
 
   // Viewport state
-  let containerHeight = 13800; // 13.8 billion years (could make this 4.54 billion years for Earth)
+  let containerHeight = 4540; // 13.8 billion years (could make this 4.54 billion years for Earth)
   let scale = spring(1);
   let centerTime = spring(MAX_TIME / 2);
   let isDragging = false;

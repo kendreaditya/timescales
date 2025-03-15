@@ -1,47 +1,85 @@
-# Svelte + TS + Vite
+# Timescales
 
-This template should help get you started developing with Svelte and TypeScript in Vite.
+A visual comparison of geological and purāṇic time scales with interactive navigation.
 
-## Recommended IDE Setup
+## Overview
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+This application provides an interactive visualization of both geological and purāṇic time scales, allowing users to compare and explore various time periods and significant events across both systems. The timeline spans from present day to 4.54 billion years ago (the approximate age of Earth) with the ability to zoom and navigate throughout the entire history.
 
-## Need an official Svelte framework?
+## Features
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+- **Interactive Timeline**: Zoom in/out and pan through time using mouse wheel or touch gestures
+- **Dual Time Scales**: Side-by-side comparison of geological and purāṇic time periods
+- **Event Markers**: Important events from both systems displayed at appropriate time points
+- **Responsive Design**: Works across devices with touch support
+- **Visual Hierarchy**: Time periods are displayed with nested hierarchy for clear understanding
 
-## Technical considerations
+## Getting Started
 
-**Why use this over SvelteKit?**
+### Prerequisites
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+- Node.js (v16 or newer)
+- npm or yarn
 
-This template contains as little as possible to get started with Vite + TypeScript + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+### Installation
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
-
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
-
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
-
-**Why include `.vscode/extensions.json`?**
-
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
-
-**Why enable `allowJs` in the TS template?**
-
-While `allowJs: false` would indeed prevent the use of `.js` files in the project, it does not prevent the use of JavaScript syntax in `.svelte` files. In addition, it would force `checkJs: false`, bringing the worst of both worlds: not being able to guarantee the entire codebase is TypeScript, and also having worse typechecking for the existing JavaScript. In addition, there are valid use cases in which a mixed codebase may be relevant.
-
-**Why is HMR not preserving my local component state?**
-
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
-
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
-
-```ts
-// store.ts
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd timescales
 ```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn
+```
+
+3. Start the development server:
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+4. Open your browser and navigate to `http://localhost:5173`
+
+## How to Use
+
+- **Zoom**: Use mouse wheel or pinch gesture on touchscreen
+- **Pan**: Click and drag or touch and drag to move through time
+- **View Details**: Hover over time periods or events to see additional information
+
+## Technology Stack
+
+- [Svelte](https://svelte.dev/) - Frontend framework
+- [TypeScript](https://www.typescriptlang.org/) - Type safety and improved developer experience
+- [Vite](https://vitejs.dev/) - Fast build tool and development server
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+
+## Project Structure
+
+```
+/src
+  /assets
+    - geologicevents.json  # Geological events data
+    - geologictime.json    # Geological time periods data
+    - puranicevents.json   # Purāṇic events data
+    - puranictime.ts       # Purāṇic time periods generation
+  /lib
+    - TimeDivision.svelte  # Time division component
+    - TimeScale.svelte     # Timeline scale component
+    - GeologicEvents.svelte # Geological events component
+    - PuranicEvents.svelte # Purāṇic events component
+  - App.svelte             # Main application component
+  - main.ts               # Application entry point
+```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).

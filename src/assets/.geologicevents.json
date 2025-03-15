@@ -1,7 +1,55 @@
 [
   {
+    "time": 0.1,
+    "event": "Earliest clothes"
+  },
+  {
+    "time": 0.25,
+    "event": "Earliest rock art"
+  },
+  {
+    "time": 1.6,
+    "event": "Earliest fire / cooking"
+  },
+  {
+    "time": 1.8,
+    "event": "Earliest language"
+  },
+  {
+    "time": 2,
+    "event": "Dispersal beyond Africa"
+  },
+  {
     "time": 2.6,
-    "event": "Earliest signs of Homo"
+    "event": "Earliest sign of Homo"
+  },
+  {
+    "time": 3.4,
+    "event": "Earliest stone tools"
+  },
+  {
+    "time": 4.5,
+    "event": "Earliest sign of Australopithecus"
+  },
+  {
+    "time": 5.5,
+    "event": "Earliest sign of Ardipithecus"
+  },
+  {
+    "time": 7,
+    "event": "Earliest bipedal"
+  },
+  {
+    "time": 8.5,
+    "event": "Chimpanzee split"
+  },
+  {
+    "time": 9,
+    "event": "Gorilla split"
+  },
+  {
+    "time": 10,
+    "event": "Earlier apes"
   },
   {
     "time": 66,

@@ -1,130 +1,86 @@
+<!-- lib/PuranicEvents.svelte -->
 <script lang="ts">
-  import { onMount } from "svelte";
-  import Timeline from "./PuranicEvents.ts";
-  import type { TimeUnit } from "../assets/puranictime";
-  import puranicEvents from "../assets/puranicevents.json";
-  import { calculateEventTime, calculateEventTimes } from "./puranicEventsUtils";
+    import type { TimeUnit } from '../assets/puranictime';
+    import puranicEvents from '../assets/puranicevents.json';
+    import { calculateEventTime } from './puranicEventsUtils';
+    
+    export let startTime: number;
+    export let endTime: number;
+    export let timeToPixel: (time: number) => number;
+    export let puranicPeriods: TimeUnit[];
 
-  export let startTime: number;
-  export let endTime: number;
-  export let timeToPixel: (time: number) => number;
-  export let puranicPeriods: TimeUnit[];
+    $: timedEvents = puranicEvents.map(event => ({
+        time: calculateEventTime(event, puranicPeriods),
+        event: event.event,
+        reference: event.refrence
+    }));
 
-  $: timedEvents = puranicEvents.filter((event) => event.position != "range").map((event) => ({
-    // time: calculateEventTime(event, puranicPeriods),
-    ...calculateEventTimes(event, puranicPeriods),
-    event: event.event,
-    reference: event.refrence,
-  }));
-
-  $: visibleEvents = timedEvents.filter(
-    // (event) => event.time <= endTime && event.time >= startTime
-    (event) => true
-  );
-
-  let timelineContainer;
-  let timeline;
-
-  // Watch for changes in startTime, endTime, and visibleEvents
-  $: if (timeline && timelineContainer) {
-    timeline = new Timeline(timelineContainer, visibleEvents, {
-      startTime,
-      endTime,
-      timeToPixel
-    });
-  }
-
-  onMount(async () => {
-    if (!timelineContainer) {
-      console.error("Timeline container not found");
-      return;
-    }
-
-    try {
-      timeline = new Timeline(timelineContainer, visibleEvents, {
-        startTime,
-        endTime,
-        timeToPixel
-      });
-
-      const handleResize = () => {
-        if (timeline) {
-          timeline.init();
-        }
-      };
-
-      window.addEventListener("resize", handleResize);
-
-      return () => {
-        window.removeEventListener("resize", handleResize);
-        if (timelineContainer) {
-          timelineContainer.innerHTML = "";
-        }
-      };
-    } catch (error) {
-      console.error("Error initializing timeline:", error);
-    }
-  });
+    $: visibleEvents = timedEvents.filter(
+        event => event.time <= endTime && event.time >= startTime
+    );
 </script>
 
-<div
-  bind:this={timelineContainer}
-  id="timeline-container"
-  class="w-full h-full min-h-[400px]"
->
-  <!-- Timeline will be rendered here -->
+<div class="events-container">
+    {#each visibleEvents as event}
+        <div
+            class="event"
+            style="top: {timeToPixel(event.time)}px"
+        >
+            <div class="tick-line"></div>
+            <div class="event-content">
+                <div class="event-time">{event.time.toFixed(2)} Ma</div>
+                <div class="event-name">{event.event}</div>
+                {#if event.reference}
+                    <div class="event-reference">{event.reference}</div>
+                {/if}
+            </div>
+        </div>
+    {/each}
 </div>
 
 <style>
-  :global(.events-container) {
-    display: flex;
-  }
+    .events-container {
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
 
-  :global(.tick-marks) {
-    position: relative;
-    width: 30px;
-    border-right: 1px solid #ddd;
-  }
+    .event {
+        width: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 8px;
+        transform: translateY(-50%);
+        padding: 4px;
+    }
 
-  :global(.tick-line) {
-    position: absolute;
-    width: 20px;
-    height: 1px;
-    background-color: #666;
-    right: 0;
-  }
+    .event-content {
+        font-size: 0.875rem;
+        text-align: left;
+        width: 100%;
+    }
 
-  :global(.event-labels) {
-    position: relative;
-    flex: 1;
-    padding-left: 20px;
-  }
+    .event-time {
+        color: #666;
+        font-size: 0.75rem;
+    }
 
-  :global(.event) {
-    position: absolute;
-    width: calc(100% - 20px);
-  }
+    .event-name {
+        line-height: 1.1;
+    }
 
-  :global(.event-content) {
-    font-size: 0.875rem;
-    text-align: left;
-  }
+    .event-reference {
+        font-size: 0.75rem;
+        color: #666;
+        font-style: italic;
+    }
 
-  :global(.event-time) {
-    color: #666;
-    font-size: 0.75rem;
-    font-weight: 500;
-  }
-
-  :global(.event-name) {
-    line-height: 1.2;
-    margin: 4px 0;
-    font-weight: 500;
-  }
-
-  :global(.event-reference) {
-    font-size: 0.75rem;
-    color: #666;
-    font-style: italic;
-  }
+    .tick-line {
+        width: 20px;
+        height: 1px;
+        background-color: #666;
+        margin-left: 8px;
+    }
 </style>

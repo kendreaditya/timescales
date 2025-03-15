@@ -28,7 +28,7 @@
   {#each ticks as tick}
     <div 
       class="tick"
-      style="transform: translateY({tick.y}px)"
+      style="top: {tick.y}px"
     >
       <div class="tick-line"></div>
       <div class="tick-label">{tick.time} Ma</div>
@@ -43,6 +43,12 @@
     height: 100%;
   }
   
+  .tick {
+    position: absolute;
+    width: 100%;
+    transform: translateY(-50%);
+  }
+  
   .tick-line {
     width: 100%;
     height: 1px;
@@ -53,5 +59,6 @@
     position: absolute;
     font-size: 12px;
     color: #666;
+    margin-top: 3px;
   }
 </style>

@@ -1,134 +1,46 @@
 [
   {
-    "manvantar": 1,
-    "position": "start",
-    "event": "Start of Swayambhu Manu"
+      "manvantar": 3,
+      "position": "start", 
+      "event": "Uttama Manu + Universal Flood (Pralaya)"
   },
   {
-    "manvantar": 2,
-    "position": "start",
-    "event": "Start of Swarochisha Manu"
+      "manvantar": 4,
+      "position": "start",
+      "event": "Tapasa/Tamasa Manu + Universal Flood (Pralaya)"
   },
   {
-    "manvantar": 3,
-    "position": "start",
-    "event": "Start of Uttama Manu"
+      "manvantar": 5,
+      "position": "start",
+      "event": "Raivata Manu + Universal Flood (Pralaya)"
   },
   {
-    "manvantar": 4,
-    "position": "start",
-    "event": "Start of Tapasa/Tamasa Manu"
+      "manvantar": 6,
+      "position": "start",
+      "event": "Chakshusha Manu + Universal Flood (Pralaya)"
   },
   {
-    "manvantar": 5,
-    "position": "start",
-    "event": "Start of Raivata Manu"
-  },
-  {
-    "manvantar": 6,
-    "position": "start",
-    "event": "Start of Chakshusha Manu"
-  },
-  {
-    "manvantar": 7,
-    "position": "start",
-    "event": "Start of Vaivasvata Manu"
-  },
-  {
-    "manvantar": 1,
-    "position": "range",
-    "event": "Lord Varaha appears lifts Earth from loer regions of the universe (1st appearance)",
-    "refrence": "Lagu Bhagavatamrta 3.10"
-  },
-  {
-    "manvantar": 6,
-    "position": "range",
-    "event": "Lord Varaha lifts Earth from universal waters and kills Hiranyaksha (2nd appearance)",
-    "refrence": "Lagu Bhagavatamrta 3.10"
-  },
-  {
-    "manvantar": 6,
-    "position": "range",
-    "event": "Dakasa repopulates the Universe",
-    "refrence": "Lagu Bhagavatamrta 3.13"
+      "manvantar": 7,
+      "position": "start",
+      "event": "(Lord Matsya saves) Vaivasvata Manu + Universal Flood (Pralaya)"
   },
   {
     "manvantar": 6,
     "position": "middle",
-    "event": "mid-Manvantara Annihilation",
-    "refrence": "Lagu Bhagavatamrta 3.18-19"
+    "event": "mid-Manvantara Annihilation + Dakasa repopulates the Universe + Lord Varaha lifts Earth from universal waters + Churning of the Milk Ocean + Lord Narsimha appears",
+    "refrence": "Lagu Bhagavatamrta 3.18-19, 3.13, 3.10, 3.70 and 3.65"
   },
   {
     "manvantar_sandhya": 2,
     "position": "start",
-    "event": "Universal Flood (Pralaya)"
-  },
-  {
-    "manvantar_sandhya": 3,
-    "position": "start",
-    "event": "Universal Flood (Pralaya)"
-  },
-  {
-    "manvantar_sandhya": 4,
-    "position": "start",
-    "event": "Universal Flood (Pralaya)"
-  },
-  {
-    "manvantar_sandhya": 5,
-    "position": "start",
-    "event": "Universal Flood (Pralaya)"
-  },
-  {
-    "manvantar_sandhya": 6,
-    "position": "start",
-    "event": "Universal Flood (Pralaya)"
-  },
-  {
-    "manvantar_sandhya": 7,
-    "position": "start",
-    "event": "Universal Flood (Pralaya)"
-  },
-  {
-    "manvantar_sandhya": 2,
-    "position": "start",
-    "event": "Lord Matsya recovers the Vedas",
-    "refrence": "Lagu Bhagavatamrta 3.23-30 and 3.33"
-  },
-  {
-    "manvantar_sandhya": 7,
-    "position": "start",
-    "event": "Lord Matsya saves Vaivasvata Manu",
-    "refrence": "Lagu Bhagavatamrta 3.31"
-  },
-  {
-    "manvantar": 6,
-    "position": "range",
-    "event": "Lord Narsimha appears to kill Hiranyakashipu",
-    "refrence": "Lagu Bhagavatamrta 3.65"
-  },
-  {
-    "manvantar": 6,
-    "position": "range",
-    "event": "Churning of the Milk Ocean",
-    "refrence": "Lagu Bhagavatamrta 3.70"
-  },
-  {
-    "manvantar": 1,
-    "position": "range",
-    "event": "Vamanadev appeared to Baskali, king of the demons (1st appearance)",
-    "refrence": "Lagu Bhagavatamrta 3.74"
-  },
-  {
-    "manvantar": 7,
-    "position": "range",
-    "event": "Vamanadev went to the sacrifice of Dhundhu (2nd appearance)",
-    "refrence": "Lagu Bhagavatamrta 3.74"
+    "event": "Lord Matsya recovers the Vedas + Lord Varaha appears lifts Earth + Swarochisha Manu + Universal Flood (Pralaya)",
+    "refrence": "Lagu Bhagavatamrta 3.23-30, 3.33 and 3.10"
   },
   {
     "manvantar": 7,
     "chaturyuga": 7,
     "position": "range",
-    "event": "Vamanadev took birth as the son of Kasyapa from the womb of Aditi and took away all the lands of Bali Maharaja",
+    "event": "Vamanadev appers",
     "refrence": "Lagu Bhagavatamrta 3.74"
   },
   {
@@ -136,38 +48,19 @@
     "chaturyuga": 24,
     "yuga": "treta",
     "position": "range",
-    "event": "Lord Ramacandra appeared with His brothers, Laksmana, Bharata and Satrughna, and His wife, Sita, and killed Ravana",
+    "event": "Lord Ramacandra appers",
     "refrence": "Lagu Bhagavatamrta 3.78"
   },
   {
     "manvantar": 5,
-    "position": "range",
+    "position": "middle",
     "event": "Vaikuntha planet was created",
     "refrence": "Lagu Bhagavatamrta 4.11"
   },
   {
-    "manvantar": 7,
-    "chaturyuga": 28,
-    "yuga": "dwapara",
-    "position": "end",
-    "event": "Lord Krsna appeared in the Yadu dynasty + Kurukshetra War + Khandava Forest Fire"
-  },
-  {
-    "manvantar": 7,
-    "chaturyuga": 17,
-    "position": "range",
-    "event": "Possible appearance of Parasurama"
-  },
-  {
-    "manvantar": 7,
-    "chaturyuga": 22,
-    "position": "range",
-    "event": "Alternative date for appearance of Parasurama"
-  },
-  {
     "manvantar_sandhya": 1,
-    "position": "start",
-    "event": "Naimittika Pralaya: Universal annihilation with rains, flood, and fire.",
+    "position": "middle",
+    "event": "Naimittika Pralaya + Swayambhuva Manu",
     "refrence": "Vishnudharmottara Purana"
   }
 ]
