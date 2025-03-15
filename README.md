@@ -4,6 +4,10 @@ A visual comparison of geological and purāṇic time scales with interactive na
 
 ## Overview
 
+<p align="center">
+  <img src="timescale.png" alt="Timescales Visualization" width="800">
+</p>
+
 This application provides an interactive visualization of both geological and purāṇic time scales, allowing users to compare and explore various time periods and significant events across both systems. The timeline spans from present day to 4.54 billion years ago (the approximate age of Earth) with the ability to zoom and navigate throughout the entire history.
 
 ## Features
