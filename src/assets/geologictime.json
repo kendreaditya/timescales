@@ -1,0 +1,49 @@
+[
+    {
+        "name": "Phanerozoic",
+        "start": 0,
+        "end": 541,
+        "children": [
+            {
+                "name": "Cenozoic",
+                "start": 0,
+                "end": 66,
+                "children": [
+                    { "name": "Quaternary", "start": 0, "end": 2.58 },
+                    { "name": "Neogene", "start": 2.58, "end": 23.03 },
+                    { "name": "Paleogene", "start": 23.03, "end": 66 }
+                ]
+            },
+            {
+                "name": "Mesozoic",
+                "start": 66,
+                "end": 252.17,
+                "children": [
+                    { "name": "Cretaceous", "start": 66, "end": 145 },
+                    { "name": "Jurassic", "start": 145, "end": 201.3 },
+                    { "name": "Triassic", "start": 201.3, "end": 252.17 }
+                ]
+            },
+            {
+                "name": "Paleozoic",
+                "start": 252.17,
+                "end": 541,
+                "children": [
+                    { "name": "Permian", "start": 252.17, "end": 298.9 },
+                    { "name": "Carboniferous", "start": 298.9, "end": 358.9 },
+                    { "name": "Devonian", "start": 358.9, "end": 419.2 },
+                    { "name": "Silurian", "start": 419.2, "end": 443.8 },
+                    { "name": "Ordovician", "start": 443.8, "end": 485.4 },
+                    { "name": "Cambrian", "start": 485.4, "end": 541 }
+                ]
+            }
+        ]
+    },
+    { "name": "Proterozoic", "start": 541, "end": 2500 },
+    { "name": "Archean", "start": 2500, "end": 4000 },
+    { "name": "Hadean", "start": 4000, "end": 4540 },
+    { "name": "Accelerated Expansion", "start": 4540, "end": 5000 },
+    { "name": "Matter-dominated era", "start": 5000, "end": 9800 },
+    { "name": "Reionization", "start": 9800, "end": 13000 },
+    { "name": "Dark Ages", "start": 13000, "end": 13800 }
+]
