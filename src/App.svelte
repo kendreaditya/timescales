@@ -114,7 +114,7 @@
           effectiveMinScale,
           Math.min(MAX_SCALE, $scale * zoomFactor)
         );
-        scale.set(newScale);
+        scale.set(newScale, { hard: true });
       }
       touchDistance = newDistance;
     } else if (isDragging) {
@@ -125,7 +125,8 @@
         Math.max(
           MIN_TIME + visibleTimeRange / 2,
           Math.min(MAX_TIME - visibleTimeRange / 2, $centerTime + deltaTime)
-        )
+        ),
+        { hard: true }
       );
       lastDragPos = event.touches[0].clientY;
     }
@@ -152,7 +153,8 @@
       Math.max(
         MIN_TIME + visibleTimeRange / 2,
         Math.min(MAX_TIME - visibleTimeRange / 2, $centerTime + deltaTime)
-      )
+      ),
+      { hard: true }
     );
     lastDragPos = event.clientY;
   }
