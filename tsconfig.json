@@ -16,6 +16,6 @@
     "isolatedModules": true,
     "moduleDetection": "force"
   },
-  "include": ["src/**/*.ts", "src/**/*.js", "src/**/*.svelte", "src/lib/..PuranicEvents.svelte"],
+  "include": ["src/**/*.ts", "src/**/*.js", "src/**/*.svelte", "src/lib/PuranicEvents.svelte , "src/lib/...PuranicEvents.svelte", "src/lib/.PuranicEvents.svelte""src/lib/...PuranicEvents.svelte", "src/lib/.PuranicEvents.svelte""src/lib/...PuranicEvents.svelte""src/lib/.PuranicEvents.svelte", "src/assets/.puranictime.ts", "src/assets/.puranictime.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
